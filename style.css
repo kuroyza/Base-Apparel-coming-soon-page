@@ -20,7 +20,8 @@ html {
 
 body {
    font-family: 'Josefin Sans', sans-serif;
-   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+   background: linear-gradient(135deg, hsl(0, 0%, 100%),
+         hsl(0, 100%, 98%));
    color: var(--darkGrayishRed);
    width: 100%;
    height: 100vh;
@@ -42,15 +43,16 @@ body {
 }
 
 .hero__bg {
-   width: 100%;
+   flex-basis: 44%;
    background-image: url(./images/hero-desktop.jpg);
    background-position: center;
    background-size: cover;
 }
 
 .hero__details {
+   flex-basis: 56%;
    padding: 10%;
-   padding-right: 16%;
+   padding-right: 17%;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -142,4 +144,95 @@ body {
    font-size: 1rem;
    color: var(--softRed);
    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1200px) {
+
+   .logo {
+      left: 8%;
+   }
+
+   .hero__details {
+      flex-basis: 54%;
+      padding: 8%;
+      padding-right: 10%;
+   }
+
+
+   .hero__bg {
+      flex-basis: 46%;
+   }
+
+}
+
+@media screen and (max-width: 900px) {
+
+   .logo {
+      left: 6%;
+   }
+
+   .hero__details {
+      padding: 6%;
+      padding-right: 8%;
+   }
+
+}
+
+@media screen and (max-width: 550px) {
+
+   .logo {
+      left: 10%;
+      top: 3%;
+   }
+
+   .logo img {
+      width: 70%;
+   }
+
+   .hero {
+      flex-direction: column;
+      margin-top: 18%;
+   }
+
+   .hero__bg {
+      flex-basis: 38%;
+      background-image: url(./images/hero-mobile.jpg);
+      order: 1;
+   }
+
+   .hero__details {
+      text-align: center;
+      order: 2;
+      flex-basis: 62%;
+      padding: 0 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .hero__details--text-title {
+      font-size: 3.5rem;
+   }
+
+   .hero__details--text-paragraph {
+      font-size: 1.3rem;
+   }
+
+
+   .hero__details--form {
+      margin-top: 1.5rem;
+   }
+
+   .hero__details--form-input {
+      font-size: 1.4rem;
+      padding: 1.2rem 2.4rem;
+   }
+
+   .hero__details--form-submit {
+      padding: 1.2rem 2.4rem;
+
+   }
+
+
 }
