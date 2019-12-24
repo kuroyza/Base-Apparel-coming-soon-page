@@ -20,10 +20,11 @@ html {
 
 body {
    font-family: 'Josefin Sans', sans-serif;
-   background: linear-gradient(135deg, hsl(0, 0%, 100%),
-         hsl(0, 100%, 98%));
+   background-image: url(./images/bg-pattern-desktop.svg);
+   background-position: left;
    color: var(--darkGrayishRed);
    width: 100%;
+   height: 100vh;
 }
 
 .logo {
