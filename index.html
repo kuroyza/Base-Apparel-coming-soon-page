@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  We're coming soon
+  <div class="logo">
+    <img src="./images/logo.svg" alt="Logo">
+  </div>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
 
-  Email Address
-  
+  <div class="hero">
+    <div class="hero__details">
+      <div class="hero__details--text">
+        <h1 class="hero__details--text-title"><span>We're</span> coming soon</h1>
+        <p class="hero__details--text-paragraph">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+      </div>
+
+      <form action="#" method="post" class="hero__details--form">
+
+        <div class="hero__details--form-input-container">
+          <input class="hero__details--form-input" type="email" id="email" placeholder="Email Address" name="email"
+            id="email">
+          <button class="hero__details--form-submit">
+            <img src="./images/icon-arrow.svg" alt="Submit icon">
+          </button>
+          <div class="hero__details--form-error-icon">
+            <img src="./images/icon-error.svg" alt="Error icon">
+          </div>
+
+          <!-- - The `input` field is empty -->
+          <label class="hero__details--form-label" for="email">Please provide a valide email</label>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="hero__bg"></div>
+  </div>
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://instagram.com/Kuroyza">Kuroyza</a>.
     </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
